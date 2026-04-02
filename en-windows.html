@@ -1,11 +1,13 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>English Guide Windows — AriA Server</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <div class="guide-wrap">
     <div class="guide-header">
@@ -19,38 +21,52 @@
       <span>~15–20 min</span>
     </div>
 
-    <p class="intro">Hey! This guide will walk you through setting up Minecraft on Windows step by step. No experience required — everything is explained.</p>
+    <p class="intro">Hey! This guide will walk you through setting up Minecraft on Windows step by step. No experience
+      required — everything is explained.</p>
 
     <div class="step">
-      <div class="step-header"><span class="step-num">01</span><h2>Install a Minecraft Launcher</h2></div>
+      <div class="step-header"><span class="step-num">01</span>
+        <h2>Install a Minecraft Launcher</h2>
+      </div>
       <p>The <strong>launcher</strong> is the app that starts Minecraft. Pick one:</p>
       <ul>
-        <li><strong>SKLauncher</strong>, recommended if you <strong>don't</strong> own Minecraft — download from <a href="https://skmedix.pl/" target="_blank" rel="noopener">skmedix.pl</a></li>
-        <li><strong>Official Minecraft Launcher</strong>, if you have a Microsoft or Mojang account — download from <a href="https://www.minecraft.net/en-us/download" target="_blank" rel="noopener">minecraft.net</a></li>
+        <li><strong>SKLauncher</strong>, recommended if you <strong>don't</strong> own Minecraft — download from <a
+            href="https://skmedix.pl/" target="_blank" rel="noopener">skmedix.pl</a></li>
+        <li><strong>Official Minecraft Launcher</strong>, if you have a Microsoft or Mojang account — download from <a
+            href="https://www.minecraft.net/en-us/download" target="_blank" rel="noopener">minecraft.net</a></li>
       </ul>
-      <p class="note">After installing, open the launcher, select version <code>1.20.1</code> and launch it once. You can close it as soon as the main menu appears — this just creates the game files.</p>
+      <p class="note">After installing, open the launcher, select version <code>1.20.1</code> and launch it once. You
+        can close it as soon as the main menu appears — this just creates the game files.</p>
     </div>
 
     <hr class="divider">
 
     <div class="step">
-      <div class="step-header"><span class="step-num">02</span><h2>Install Java</h2></div>
+      <div class="step-header"><span class="step-num">02</span>
+        <h2>Install Java</h2>
+      </div>
       <p>Java is a free program that Fabric needs to run.</p>
       <ol>
         <li>Go to <a href="https://adoptium.net/" target="_blank" rel="noopener">adoptium.net</a></li>
         <li>Click <strong>Latest LTS release</strong> to download the installer</li>
         <li>Open the downloaded file and follow the prompts (keep clicking <strong>Next</strong>)</li>
       </ol>
-      <p class="note">If the Fabric installer opens without any error about Java, you can skip this step — you probably already have it.</p>
+      <p class="note">If the Fabric installer opens without any error about Java, you can skip this step — you probably
+        already have it.</p>
     </div>
 
     <hr class="divider">
 
     <div class="step">
-      <div class="step-header"><span class="step-num">03</span><h2>Install Fabric</h2></div>
-      <p><strong>Fabric</strong> is a component that lets the game load mods. It's required to connect to the server.</p>
+      <div class="step-header"><span class="step-num">03</span>
+        <h2>Install Fabric</h2>
+      </div>
+      <p><strong>Fabric</strong> is a component that lets the game load mods. It's required to connect to the server.
+      </p>
       <ol>
-        <li>Download the <a href="https://maven.fabricmc.net/net/fabricmc/fabric-installer/1.0.3/fabric-installer-1.0.3.jar">Fabric Installer</a> (it's a <code>.jar</code> file)</li>
+        <li>Download the <a
+            href="https://maven.fabricmc.net/net/fabricmc/fabric-installer/1.0.3/fabric-installer-1.0.3.jar">Fabric
+            Installer</a> (it's a <code>.jar</code> file)</li>
         <li><strong>Double-click</strong> the downloaded file to open it</li>
         <li>In the window that appears, make sure the version is <code>1.20.1</code></li>
         <li>Click <strong>Install</strong> and wait a few seconds</li>
@@ -60,42 +76,59 @@
     <hr class="divider">
 
     <div class="step">
-      <div class="step-header"><span class="step-num">04</span><h2>Install the Mods</h2></div>
+      <div class="step-header"><span class="step-num">04</span>
+        <h2>Install the Mods</h2>
+      </div>
       <p>The server requires specific mods — without them you won't be able to connect.</p>
       <ol>
         <li>Press <code>Win + R</code> on your keyboard</li>
         <li>Type <code>%appdata%</code> and press <strong>Enter</strong></li>
         <li>A folder opens — find and open the one called <code>.minecraft</code></li>
-        <li>If there's already a folder called <code>mods</code>, <strong>delete it entirely</strong> (right-click → Delete)</li>
+        <li>If there's already a folder called <code>mods</code>, <strong>delete it entirely</strong> (right-click →
+          Delete)</li>
         <li>Create a new empty folder called <code>mods</code></li>
-        <li>Download <code>mods.zip</code> from the <a href="https://drive.google.com/drive/folders/1PGz6Pj-zHA_SCj3PurE3ThTkz9V7AP9N?usp=sharing" target="_blank" rel="noopener">shared folder</a> (requires a Google account)</li>
-        <li>Open the <code>.zip</code>, select everything (<code>Ctrl + A</code>) and drag it all into the <code>mods</code> folder</li>
+        <li>Download <code>mods.zip</code> from the <a
+            href="https://drive.google.com/drive/folders/1PGz6Pj-zHA_SCj3PurE3ThTkz9V7AP9N?usp=sharing" target="_blank"
+            rel="noopener">shared folder</a> (requires a Google account)</li>
+        <li>Open the <code>.zip</code>, select everything (<code>Ctrl + A</code>) and drag it all into the
+          <code>mods</code> folder</li>
       </ol>
     </div>
 
     <hr class="divider">
 
     <div class="step step-optional">
-      <div class="step-header"><span class="step-num">05 — optional</span><h2>Install Resource Packs</h2></div>
+      <div class="step-header"><span class="step-num">05 — optional</span>
+        <h2>Install Resource Packs</h2>
+      </div>
       <p>Resource packs change how the game looks. Not required, but they improve the experience.</p>
       <ol>
-        <li>Download <code>resourcepacks.zip</code> from the <a href="https://1drv.ms/f/c/065897bd642782c8/EjrP1DBPqGpLsBY0MtgaA4QBK0Mirq6CyuJGV2kWlkpRyw?e=64qIxT" target="_blank" rel="noopener">shared folder</a></li>
+        <li>Download <code>resourcepacks.zip</code> from the <a
+            href="https://drive.google.com/drive/folders/1PGz6Pj-zHA_SCj3PurE3ThTkz9V7AP9N?usp=sharing" target="_blank"
+            rel="noopener">shared folder</a></li>
         <li>Go back to <code>.minecraft</code> (same as step 4, steps 1–3)</li>
         <li>Create a <code>resourcepacks</code> folder if it doesn't exist</li>
         <li>Open the zip and drag everything into <code>.minecraft/resourcepacks</code></li>
-        <li>In-game, go to <strong>Options → Resource Packs</strong> and move packs from left to right to activate them</li>
+        <li>In-game, go to <strong>Options → Resource Packs</strong> and move packs from left to right to activate them
+        </li>
       </ol>
     </div>
 
     <hr class="divider">
 
     <div class="step step-optional">
-      <div class="step-header"><span class="step-num">06 — optional</span><h2>Install Shaders</h2></div>
+      <div class="step-header"><span class="step-num">06 — optional</span>
+        <h2>Install Shaders</h2>
+      </div>
       <p>Shaders make the game look much better, but require a reasonably powerful PC. If your PC is old, skip this.</p>
       <ol>
-        <li>Download <strong>Iris</strong> and place it in the <code>mods</code> folder: <a href="https://cdn.modrinth.com/data/YL57xq9U/versions/s5eFLITc/iris-1.7.6%2Bmc1.20.1.jar">iris-1.7.6+mc1.20.1.jar</a></li>
+        <li>Download <strong>Iris</strong> and place it in the <code>mods</code> folder: <a
+            href="https://cdn.modrinth.com/data/YL57xq9U/versions/s5eFLITc/iris-1.7.6%2Bmc1.20.1.jar">iris-1.7.6+mc1.20.1.jar</a>
+        </li>
         <li>Create a <code>shaderpacks</code> folder inside <code>.minecraft</code> if it doesn't exist</li>
-        <li>Download <strong>Complementary Unbound</strong> and place it in <code>shaderpacks</code>: <a href="https://cdn.modrinth.com/data/R6NEzAwj/versions/1ng9gVp7/ComplementaryUnbound_r5.5.1.zip">ComplementaryUnbound_r5.5.1.zip</a></li>
+        <li>Download <strong>Complementary Unbound</strong> and place it in <code>shaderpacks</code>: <a
+            href="https://cdn.modrinth.com/data/R6NEzAwj/versions/1ng9gVp7/ComplementaryUnbound_r5.5.1.zip">ComplementaryUnbound_r5.5.1.zip</a>
+        </li>
         <li>In-game, go to <strong>Options → Shaders</strong> and select the shader pack</li>
       </ol>
     </div>
@@ -103,41 +136,69 @@
     <hr class="divider">
 
     <div class="step">
-      <div class="step-header"><span class="step-num">07</span><h2>Start the Server</h2></div>
-      <p>The server is started and stopped from the <a href="https://aria-mc-server-972697371927.europe-west8.run.app/" target="_blank" rel="noopener">AriA Panel</a>.</p>
+      <div class="step-header"><span class="step-num">07</span>
+        <h2>Start the Server</h2>
+      </div>
+      <p>The server is started and stopped from the <a href="https://aria-mc-server-972697371927.europe-west8.run.app/"
+          target="_blank" rel="noopener">AriA Panel</a>.</p>
       <ol>
-        <li>Open the <a href="https://aria-mc-server-972697371927.europe-west8.run.app/" target="_blank" rel="noopener">AriA Panel</a> and click <strong>Start</strong></li>
+        <li>Open the <a href="https://aria-mc-server-972697371927.europe-west8.run.app/" target="_blank"
+            rel="noopener">AriA Panel</a> and click <strong>Start</strong></li>
         <li>Wait a few minutes — the panel shows live status</li>
         <li>When the IP address appears, the server is up and you can connect</li>
       </ol>
-      <p class="note">The server shuts down automatically when no players are online. Don't worry about turning it off manually.</p>
+      <p class="note">The server shuts down automatically when no players are online. Don't worry about turning it off
+        manually.</p>
     </div>
 
     <hr class="divider">
 
     <div class="step">
-      <div class="step-header"><span class="step-num">08</span><h2>Join the Server</h2></div>
+      <div class="step-header"><span class="step-num">08</span>
+        <h2>Join the Server</h2>
+      </div>
       <ol>
         <li>Open the launcher and select the <strong>Fabric 1.20.1</strong> profile</li>
         <li>Launch the game</li>
         <li>In the main menu, click <strong>Multiplayer → Direct Connection</strong></li>
-        <li>Copy and paste the IP shown in the <a href="https://aria-mc-server-972697371927.europe-west8.run.app/" target="_blank" rel="noopener">AriA Panel</a> (example: <code>1.2.3.4:25565</code>)</li>
+        <li>Copy and paste the IP shown in the <a href="https://aria-mc-server-972697371927.europe-west8.run.app/"
+            target="_blank" rel="noopener">AriA Panel</a> (example: <code>1.2.3.4:25565</code>)</li>
         <li>Click <strong>Join Server</strong> and have fun!</li>
       </ol>
     </div>
 
     <hr class="divider">
 
-    <h2 style="font-size:0.85rem;color:#4a6199;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem;">Common Issues</h2>
+    <h2 style="font-size:0.85rem;color:#4a6199;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem;">
+      Common Issues</h2>
     <table class="trouble-table">
-      <thead><tr><th>Problem</th><th>Solution</th></tr></thead>
+      <thead>
+        <tr>
+          <th>Problem</th>
+          <th>Solution</th>
+        </tr>
+      </thead>
       <tbody>
-        <tr><td>Fabric won't open</td><td>Make sure Java is installed (step 2)</td></tr>
-        <tr><td>Game crashes on launch</td><td>Delete the <code>mods</code> folder and re-extract from scratch</td></tr>
-        <tr><td>Fabric profile not in launcher</td><td>Redo step 3 — make sure you selected version 1.20.1</td></tr>
-        <tr><td>Can't connect to the server</td><td>Check that the <a href="https://aria-mc-server-972697371927.europe-west8.run.app/">AriA Panel</a> shows an IP — it may still be starting up</td></tr>
+        <tr>
+          <td>Fabric won't open</td>
+          <td>Make sure Java is installed (step 2)</td>
+        </tr>
+        <tr>
+          <td>Game crashes on launch</td>
+          <td>Delete the <code>mods</code> folder and re-extract from scratch</td>
+        </tr>
+        <tr>
+          <td>Fabric profile not in launcher</td>
+          <td>Redo step 3 — make sure you selected version 1.20.1</td>
+        </tr>
+        <tr>
+          <td>Can't connect to the server</td>
+          <td>Check that the <a href="https://aria-mc-server-972697371927.europe-west8.run.app/">AriA Panel</a> shows an
+            IP — it may still be starting up</td>
+        </tr>
       </tbody>
     </table>
   </div>
 </body>
+
 </html>
