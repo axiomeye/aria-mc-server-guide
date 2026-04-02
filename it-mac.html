@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guida Italiana Mac — AriA Server</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="guide-wrap">
+    <div class="guide-header">
+      <a class="back-link" href="index.html">&#8592; Guide</a>
+      <span class="guide-title">Guida Italiana <span class="os-tag">macOS</span></span>
+    </div>
+
+    <div class="meta">
+      <span>Minecraft 1.20.1</span>
+      <span>Fabric</span>
+      <span>~15–20 min</span>
+    </div>
+
+    <p class="intro">Ciao! Questa guida ti aiuterà passo per passo a configurare Minecraft su Mac. Non serve essere esperti: ogni passaggio è spiegato nel dettaglio.</p>
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">01</span><h2>Installa un Launcher Minecraft</h2></div>
+      <p>Il <strong>launcher</strong> è il programma che avvia Minecraft. Scegline uno:</p>
+      <ul>
+        <li><strong>SKLauncher</strong>, consigliato se <strong>non</strong> hai acquistato Minecraft — scaricalo da <a href="https://skmedix.pl/" target="_blank" rel="noopener">skmedix.pl</a> e scegli la versione macOS</li>
+        <li><strong>Launcher Ufficiale Minecraft</strong>, se hai un account Microsoft o Mojang — scaricalo da <a href="https://www.minecraft.net/it-it/download" target="_blank" rel="noopener">minecraft.net</a></li>
+      </ul>
+      <p class="note">Dopo l'installazione, apri il launcher, seleziona la versione <code>1.20.1</code> e avviala almeno una volta. Puoi chiuderla subito appena compare il menu principale: serve solo per creare i file di gioco.</p>
+    </div>
+
+    <hr class="divider">
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">02</span><h2>Installa Java</h2></div>
+      <p>Java è un programma gratuito necessario per far funzionare Fabric.</p>
+      <p><strong>Opzione A — Homebrew (se lo hai installato):</strong><br>
+      Apri il Terminale e digita: <code>brew install --cask temurin</code></p>
+      <p style="margin-top:0.5rem;"><strong>Opzione B — Download manuale:</strong><br>
+      Vai su <a href="https://adoptium.net/" target="_blank" rel="noopener">adoptium.net</a>, clicca <strong>Latest LTS release</strong>, apri il file scaricato e segui le istruzioni.</p>
+      <p class="note">Se durante l'installazione di Fabric non compare nessun errore riguardo a Java, puoi saltare questo passaggio: forse lo hai già installato.</p>
+    </div>
+
+    <hr class="divider">
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">03</span><h2>Installa Fabric</h2></div>
+      <p><strong>Fabric</strong> è un componente che permette al gioco di caricare le mod del server. È obbligatorio per connettersi.</p>
+      <ol>
+        <li>Scarica il <a href="https://maven.fabricmc.net/net/fabricmc/fabric-installer/1.0.3/fabric-installer-1.0.3.jar">Fabric Installer</a> (si tratta di un file <code>.jar</code>)</li>
+        <li>Fai <strong>doppio clic</strong> sul file per aprirlo<br>
+        <span style="font-size:0.78rem;color:#5a6e8a;">(Se non funziona, apri il Terminale e digita: <code>java -jar ~/Downloads/fabric-installer-1.0.3.jar</code>)</span></li>
+        <li>Nella finestra che compare, assicurati che la versione sia <code>1.20.1</code></li>
+        <li>Clicca <strong>Install</strong> e aspetta che finisca</li>
+      </ol>
+      <p class="note">Se macOS blocca l'apertura del file, vai su <strong>Impostazioni di Sistema → Privacy e Sicurezza</strong> e clicca <strong>Apri comunque</strong>.</p>
+    </div>
+
+    <hr class="divider">
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">04</span><h2>Installa le Mod</h2></div>
+      <p>Le mod sono piccole estensioni richieste dal server — senza di esse non ti farà connettere.</p>
+      <p style="margin-bottom:0.5rem;">Prima di tutto, apri la cartella di Minecraft. Premi <code>Cmd + Spazio</code>, digita <strong>Finder</strong>, poi nella barra del menu clicca <strong>Vai → Vai alla cartella</strong> e incolla: <code>~/Library/Application Support/minecraft</code></p>
+      <ol>
+        <li>Se esiste già una cartella chiamata <code>mods</code>, <strong>eliminala completamente</strong> (clic destro → Sposta nel cestino)</li>
+        <li>Crea una nuova cartella vuota chiamata <code>mods</code></li>
+        <li>Scarica <code>mods.zip</code> dalla <a href="https://1drv.ms/f/c/065897bd642782c8/EjrP1DBPqGpLsBY0MtgaA4QBK0Mirq6CyuJGV2kWlkpRyw?e=64qIxT" target="_blank" rel="noopener">cartella condivisa</a> (richiede un account Microsoft)</li>
+        <li>Apri il file <code>.zip</code>, seleziona tutto (<code>Cmd + A</code>) e trascinalo nella cartella <code>mods</code></li>
+      </ol>
+    </div>
+
+    <hr class="divider">
+
+    <div class="step step-optional">
+      <div class="step-header"><span class="step-num">05 — opzionale</span><h2>Installa i Resource Pack</h2></div>
+      <p>I resource pack cambiano l'aspetto visivo del gioco. Non sono obbligatori, ma migliorano l'esperienza.</p>
+      <ol>
+        <li>Scarica <code>resourcepacks.zip</code> dalla <a href="https://1drv.ms/f/c/065897bd642782c8/EjrP1DBPqGpLsBY0MtgaA4QBK0Mirq6CyuJGV2kWlkpRyw?e=64qIxT" target="_blank" rel="noopener">cartella condivisa</a></li>
+        <li>Apri di nuovo la cartella minecraft (<code>~/Library/Application Support/minecraft</code>)</li>
+        <li>Crea la cartella <code>resourcepacks</code> se non esiste già</li>
+        <li>Apri lo zip e trascina tutto il contenuto in <code>minecraft/resourcepacks</code></li>
+        <li>In gioco, vai su <strong>Opzioni → Resource Pack</strong> e sposta i pack dalla colonna sinistra a quella destra</li>
+      </ol>
+    </div>
+
+    <hr class="divider">
+
+    <div class="step step-optional">
+      <div class="step-header"><span class="step-num">06 — opzionale</span><h2>Installa gli Shader</h2></div>
+      <p>Gli shader migliorano molto la grafica, ma richiedono un Mac abbastanza potente. Se il tuo Mac è datato, salta questo passaggio.</p>
+      <ol>
+        <li>Scarica <strong>Iris</strong> e mettilo nella cartella <code>mods</code>: <a href="https://cdn.modrinth.com/data/YL57xq9U/versions/s5eFLITc/iris-1.7.6%2Bmc1.20.1.jar">iris-1.7.6+mc1.20.1.jar</a></li>
+        <li>Crea la cartella <code>shaderpacks</code> dentro la cartella minecraft se non esiste</li>
+        <li>Scarica <strong>Complementary Unbound</strong> e mettilo in <code>shaderpacks</code>: <a href="https://cdn.modrinth.com/data/R6NEzAwj/versions/1ng9gVp7/ComplementaryUnbound_r5.5.1.zip">ComplementaryUnbound_r5.5.1.zip</a></li>
+        <li>In gioco, vai su <strong>Opzioni → Shader</strong> e seleziona il pacchetto</li>
+      </ol>
+    </div>
+
+    <hr class="divider">
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">07</span><h2>Avvia il Server</h2></div>
+      <p>Il server si accende e si spegne dall'<a href="https://aria-mc-server-972697371927.europe-west8.run.app/" target="_blank" rel="noopener">AriA Panel</a>.</p>
+      <ol>
+        <li>Apri l'<a href="https://aria-mc-server-972697371927.europe-west8.run.app/" target="_blank" rel="noopener">AriA Panel</a> e clicca <strong>Start</strong></li>
+        <li>Aspetta qualche minuto: il pannello mostra lo stato in tempo reale</li>
+        <li>Quando compare l'indirizzo IP il server è acceso e puoi connetterti</li>
+      </ol>
+      <p class="note">Il server si spegne in automatico quando non ci sono giocatori collegati. Non preoccuparti di spegnerlo manualmente.</p>
+    </div>
+
+    <hr class="divider">
+
+    <div class="step">
+      <div class="step-header"><span class="step-num">08</span><h2>Collegati al Server</h2></div>
+      <ol>
+        <li>Apri il launcher e seleziona il profilo <strong>Fabric 1.20.1</strong></li>
+        <li>Avvia il gioco</li>
+        <li>Nel menu principale, clicca <strong>Multigiocatore → Connessione Diretta</strong></li>
+        <li>Copia e incolla l'indirizzo IP mostrato nell'<a href="https://aria-mc-server-972697371927.europe-west8.run.app/" target="_blank" rel="noopener">AriA Panel</a> (esempio: <code>1.2.3.4:25565</code>)</li>
+        <li>Clicca <strong>Connetti</strong> e buon divertimento!</li>
+      </ol>
+    </div>
+
+    <hr class="divider">
+
+    <h2 style="font-size:0.85rem;color:#4a6199;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem;">Problemi comuni</h2>
+    <table class="trouble-table">
+      <thead><tr><th>Problema</th><th>Soluzione</th></tr></thead>
+      <tbody>
+        <tr><td>Fabric non si apre</td><td>Assicurati di aver installato Java (passo 2)</td></tr>
+        <tr><td>macOS blocca il file <code>.jar</code></td><td>Vai su <strong>Impostazioni di Sistema → Privacy e Sicurezza</strong> e clicca <strong>Apri comunque</strong></td></tr>
+        <tr><td>Il gioco crasha subito</td><td>Elimina la cartella <code>mods</code> e riestrai da zero</td></tr>
+        <tr><td>Non vedo il profilo Fabric nel launcher</td><td>Rifai il passo 3 e assicurati di selezionare la versione 1.20.1</td></tr>
+        <tr><td>Non riesco a connettermi</td><td>Controlla che l'<a href="https://aria-mc-server-972697371927.europe-west8.run.app/">AriA Panel</a> mostri l'IP: potrebbe essere ancora in avvio</td></tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
