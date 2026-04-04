@@ -68,13 +68,15 @@
       <p class="intro">Ciao! Questa guida ti aiuterà passo per passo a configurare Minecraft su Windows. Non serve essere esperti: ogni passaggio è spiegato nel dettaglio.</p>
 
       <div class="step">
-        <div class="step-header"><span class="step-num">01</span><h2>Installa un Launcher Minecraft</h2></div>
-        <p>Il <strong>launcher</strong> è il programma che avvia Minecraft. Scegline uno:</p>
-        <ul>
-          <li><strong>SKLauncher</strong>, consigliato se <strong>non</strong> hai acquistato Minecraft: <a href="https://skmedix.pl/" target="_blank" rel="noopener">skmedix.pl</a></li>
-          <li><strong>Launcher Ufficiale Minecraft</strong>, se hai un account Microsoft o Mojang: <a href="https://www.minecraft.net/it-it/download" target="_blank" rel="noopener">minecraft.net</a></li>
-        </ul>
-        <p class="note">Dopo l'installazione, apri il launcher, seleziona la versione <code>1.20.1</code> e avviala almeno una volta. Puoi chiuderla subito appena compare il menu principale: serve solo per creare i file di gioco.</p>
+        <div class="step-header"><span class="step-num">01</span><h2>Installa SKLauncher e crea un'istanza Fabric</h2></div>
+        <p>Il <strong>launcher</strong> è il programma che avvia Minecraft. Consigliamo <strong>SKLauncher</strong> perché permette di installare Fabric direttamente:</p>
+        <ol>
+          <li>Scarica SKLauncher da <a href="https://skmedix.pl/" target="_blank" rel="noopener">skmedix.pl</a> e installalo</li>
+          <li>Apri SKLauncher e clicca <strong>Add instance</strong> (il simbolo +)</li>
+          <li>Seleziona <strong>Fabric</strong> come tipo e imposta la versione su <code>1.20.1</code></li>
+          <li>Clicca <strong>Create</strong>, poi avvia l'istanza una volta. Chiudila subito appena compare il menu principale</li>
+        </ol>
+        <p class="note">Se hai già acquistato Minecraft e preferisci il <a href="https://www.minecraft.net/it-it/download" target="_blank" rel="noopener">Launcher Ufficiale</a>, dovrai installare Fabric manualmente tramite il <a href="https://maven.fabricmc.net/net/fabricmc/fabric-installer/1.0.3/fabric-installer-1.0.3.jar">Fabric Installer</a> (versione 1.20.1).</p>
       </div><hr class="divider">
 
       <div class="step">
@@ -85,26 +87,14 @@
           <li>Clicca <strong>Latest LTS release</strong> per scaricare l'installer</li>
           <li>Apri il file scaricato e segui le istruzioni (clicca sempre <strong>Next</strong>)</li>
         </ol>
-        <p class="note">Se durante l'installazione di Fabric non compare nessun errore riguardo a Java, puoi saltare questo passaggio: forse lo hai già installato.</p>
+        <p class="note">Se SKLauncher si avvia senza errori riguardo a Java, puoi saltare questo passaggio.</p>
       </div><hr class="divider">
 
       <div class="step">
-        <div class="step-header"><span class="step-num">03</span><h2>Installa Fabric</h2></div>
-        <p><strong>Fabric</strong> è un componente che permette al gioco di caricare le mod. È obbligatorio per connettersi.</p>
-        <ol>
-          <li>Scarica il <a href="https://maven.fabricmc.net/net/fabricmc/fabric-installer/1.0.3/fabric-installer-1.0.3.jar">Fabric Installer</a> (si tratta di un file <code>.jar</code>)</li>
-          <li>Fai <strong>doppio clic</strong> sul file per aprirlo</li>
-          <li>Assicurati che la versione sia <code>1.20.1</code></li>
-          <li>Clicca <strong>Install</strong> e aspetta che finisca</li>
-        </ol>
-      </div><hr class="divider">
-
-      <div class="step">
-        <div class="step-header"><span class="step-num">04</span><h2>Installa le Mod</h2></div>
+        <div class="step-header"><span class="step-num">03</span><h2>Installa le Mod</h2></div>
         <p>Le mod richieste dal server: senza di esse non ti farà connettere.</p>
         <ol>
-          <li>Premi <code>Win + R</code>, digita <code>%appdata%</code> e premi <strong>Invio</strong></li>
-          <li>Apri la cartella <code>.minecraft</code></li>
+          <li>In SKLauncher, fai clic destro sulla tua istanza Fabric 1.20.1 e seleziona <strong>Open Folder</strong></li>
           <li>Se esiste già una cartella <code>mods</code>, <strong>eliminala completamente</strong> (clic destro → Elimina)</li>
           <li>Crea una nuova cartella vuota chiamata <code>mods</code></li>
           <li>Scarica <code>mods.zip</code> dalla <a href="https://drive.google.com/drive/folders/1PGz6Pj-zHA_SCj3PurE3ThTkz9V7AP9N?usp=sharing" target="_blank" rel="noopener">cartella condivisa</a> (richiede account Google)</li>
@@ -113,28 +103,28 @@
       </div><hr class="divider">
 
       <div class="step step-optional">
-        <div class="step-header"><span class="step-num">05 · opzionale</span><h2>Installa i Resource Pack</h2></div>
+        <div class="step-header"><span class="step-num">04 · opzionale</span><h2>Installa i Resource Pack</h2></div>
         <ol>
           <li>Scarica <code>resourcepacks.zip</code> dalla <a href="https://drive.google.com/drive/folders/1PGz6Pj-zHA_SCj3PurE3ThTkz9V7AP9N?usp=sharing" target="_blank" rel="noopener">cartella condivisa</a></li>
-          <li>Torna in <code>.minecraft</code> e crea la cartella <code>resourcepacks</code> se non esiste</li>
-          <li>Trascina tutto il contenuto dello zip in <code>.minecraft/resourcepacks</code></li>
+          <li>Apri la cartella dell'istanza (come al passo 3) e crea la cartella <code>resourcepacks</code> se non esiste</li>
+          <li>Trascina tutto il contenuto dello zip nella cartella <code>resourcepacks</code></li>
           <li>In gioco: <strong>Opzioni → Resource Pack</strong>, sposta i pack a destra per attivarli</li>
         </ol>
       </div><hr class="divider">
 
       <div class="step step-optional">
-        <div class="step-header"><span class="step-num">06 · opzionale</span><h2>Installa gli Shader</h2></div>
+        <div class="step-header"><span class="step-num">05 · opzionale</span><h2>Installa gli Shader</h2></div>
         <p>Richiedono un PC abbastanza potente. Se il tuo PC è datato, salta questo passaggio.</p>
         <ol>
-          <li>Scarica <a href="https://cdn.modrinth.com/data/YL57xq9U/versions/s5eFLITc/iris-1.7.6%2Bmc1.20.1.jar">Iris</a> e mettilo nella cartella <code>mods</code></li>
-          <li>Crea la cartella <code>shaderpacks</code> dentro <code>.minecraft</code></li>
+          <li>Apri la cartella dell'istanza (come al passo 3) e metti <a href="https://cdn.modrinth.com/data/YL57xq9U/versions/s5eFLITc/iris-1.7.6%2Bmc1.20.1.jar">Iris</a> nella cartella <code>mods</code></li>
+          <li>Crea la cartella <code>shaderpacks</code> dentro la cartella dell'istanza</li>
           <li>Scarica <a href="https://cdn.modrinth.com/data/R6NEzAwj/versions/1ng9gVp7/ComplementaryUnbound_r5.5.1.zip">Complementary Unbound</a> e mettilo in <code>shaderpacks</code></li>
           <li>In gioco: <strong>Opzioni → Shader</strong>, seleziona il pacchetto</li>
         </ol>
       </div><hr class="divider">
 
       <div class="step">
-        <div class="step-header"><span class="step-num">07</span><h2>Avvia il Server</h2></div>
+        <div class="step-header"><span class="step-num">06</span><h2>Avvia il Server</h2></div>
         <ol>
           <li>Apri l'<a href="https://aria-mc-server-972697371927.europe-west8.run.app/" target="_blank" rel="noopener">AriA Panel</a> e clicca <strong>Start</strong></li>
           <li>Aspetta qualche minuto: il pannello mostra lo stato in tempo reale</li>
@@ -144,9 +134,9 @@
       </div><hr class="divider">
 
       <div class="step">
-        <div class="step-header"><span class="step-num">08</span><h2>Collegati al Server</h2></div>
+        <div class="step-header"><span class="step-num">07</span><h2>Collegati al Server</h2></div>
         <ol>
-          <li>Apri il launcher e seleziona il profilo <strong>Fabric 1.20.1</strong></li>
+          <li>In SKLauncher, seleziona la tua istanza Fabric 1.20.1 e clicca <strong>Play</strong></li>
           <li>Nel menu principale: <strong>Multigiocatore → Connessione Diretta</strong></li>
           <li>Incolla l'IP mostrato nell'<a href="https://aria-mc-server-972697371927.europe-west8.run.app/" target="_blank" rel="noopener">AriA Panel</a> (es. <code>1.2.3.4:25565</code>)</li>
           <li>Clicca <strong>Connetti</strong> e buon divertimento!</li>
@@ -157,9 +147,8 @@
       <table class="trouble-table">
         <thead><tr><th>Problema</th><th>Soluzione</th></tr></thead>
         <tbody>
-          <tr><td>Fabric non si apre</td><td>Installa Java (passo 2)</td></tr>
           <tr><td>Il gioco crasha subito</td><td>Elimina la cartella <code>mods</code> e riestrai da zero</td></tr>
-          <tr><td>Non vedo il profilo Fabric</td><td>Rifai il passo 3, versione 1.20.1</td></tr>
+          <tr><td>Non vedo l'istanza Fabric</td><td>Rifai il passo 1 e assicurati di selezionare Fabric versione 1.20.1</td></tr>
           <tr><td>Non riesco a connettermi</td><td>Controlla che l'<a href="https://aria-mc-server-972697371927.europe-west8.run.app/">AriA Panel</a> mostri l'IP</td></tr>
         </tbody>
       </table>
@@ -175,36 +164,29 @@
       <p class="intro">Ciao! Questa guida ti aiuterà passo per passo a configurare Minecraft su Mac. Non serve essere esperti: ogni passaggio è spiegato nel dettaglio.</p>
 
       <div class="step">
-        <div class="step-header"><span class="step-num">01</span><h2>Installa un Launcher Minecraft</h2></div>
-        <ul>
-          <li><strong>SKLauncher</strong>, consigliato se <strong>non</strong> hai acquistato Minecraft: <a href="https://skmedix.pl/" target="_blank" rel="noopener">skmedix.pl</a> (scegli la versione macOS)</li>
-          <li><strong>Launcher Ufficiale Minecraft</strong>: <a href="https://www.minecraft.net/it-it/download" target="_blank" rel="noopener">minecraft.net</a></li>
-        </ul>
-        <p class="note">Dopo l'installazione, apri il launcher, seleziona la versione <code>1.20.1</code> e avviala almeno una volta.</p>
+        <div class="step-header"><span class="step-num">01</span><h2>Installa SKLauncher e crea un'istanza Fabric</h2></div>
+        <p>Il <strong>launcher</strong> è il programma che avvia Minecraft. Consigliamo <strong>SKLauncher</strong> perché permette di installare Fabric direttamente:</p>
+        <ol>
+          <li>Scarica SKLauncher da <a href="https://skmedix.pl/" target="_blank" rel="noopener">skmedix.pl</a> (scegli la versione macOS) e installalo</li>
+          <li>Apri SKLauncher e clicca <strong>Add instance</strong> (il simbolo +)</li>
+          <li>Seleziona <strong>Fabric</strong> come tipo e imposta la versione su <code>1.20.1</code></li>
+          <li>Clicca <strong>Create</strong>, poi avvia l'istanza una volta. Chiudila subito appena compare il menu principale</li>
+        </ol>
+        <p class="note">Se hai già acquistato Minecraft e preferisci il <a href="https://www.minecraft.net/it-it/download" target="_blank" rel="noopener">Launcher Ufficiale</a>, dovrai installare Fabric manualmente tramite il <a href="https://maven.fabricmc.net/net/fabricmc/fabric-installer/1.0.3/fabric-installer-1.0.3.jar">Fabric Installer</a> (versione 1.20.1).</p>
       </div><hr class="divider">
 
       <div class="step">
         <div class="step-header"><span class="step-num">02</span><h2>Installa Java</h2></div>
         <p><strong>Opzione A, Homebrew:</strong> <code>brew install --cask temurin</code></p>
         <p style="margin-top:0.5rem;"><strong>Opzione B, Download manuale:</strong> <a href="https://adoptium.net/" target="_blank" rel="noopener">adoptium.net</a> → <strong>Latest LTS release</strong></p>
-        <p class="note">Se Fabric si apre senza errori riguardo a Java, puoi saltare questo passaggio.</p>
+        <p class="note">Se SKLauncher si avvia senza errori riguardo a Java, puoi saltare questo passaggio.</p>
       </div><hr class="divider">
 
       <div class="step">
-        <div class="step-header"><span class="step-num">03</span><h2>Installa Fabric</h2></div>
+        <div class="step-header"><span class="step-num">03</span><h2>Installa le Mod</h2></div>
+        <p>Le mod richieste dal server: senza di esse non ti farà connettere.</p>
         <ol>
-          <li>Scarica il <a href="https://maven.fabricmc.net/net/fabricmc/fabric-installer/1.0.3/fabric-installer-1.0.3.jar">Fabric Installer</a> (file <code>.jar</code>)</li>
-          <li>Fai <strong>doppio clic</strong> per aprirlo<br><span style="font-size:0.78rem;color:#5a6e8a;">Se non funziona: <code>java -jar ~/Downloads/fabric-installer-1.0.3.jar</code></span></li>
-          <li>Assicurati che la versione sia <code>1.20.1</code></li>
-          <li>Clicca <strong>Install</strong></li>
-        </ol>
-        <p class="note">Se macOS blocca il file: <strong>Impostazioni di Sistema → Privacy e Sicurezza → Apri comunque</strong>.</p>
-      </div><hr class="divider">
-
-      <div class="step">
-        <div class="step-header"><span class="step-num">04</span><h2>Installa le Mod</h2></div>
-        <p style="margin-bottom:0.5rem;">Apri la cartella di Minecraft: <code>Cmd + Spazio</code> → Finder → <strong>Vai → Vai alla cartella</strong> → <code>~/Library/Application Support/minecraft</code></p>
-        <ol>
+          <li>In SKLauncher, fai clic destro sulla tua istanza Fabric 1.20.1 e seleziona <strong>Open Folder</strong></li>
           <li>Se esiste già una cartella <code>mods</code>, <strong>eliminala</strong> (clic destro → Sposta nel cestino)</li>
           <li>Crea una nuova cartella <code>mods</code></li>
           <li>Scarica <code>mods.zip</code> dalla <a href="https://drive.google.com/drive/folders/1PGz6Pj-zHA_SCj3PurE3ThTkz9V7AP9N?usp=sharing" target="_blank" rel="noopener">cartella condivisa</a></li>
@@ -213,28 +195,28 @@
       </div><hr class="divider">
 
       <div class="step step-optional">
-        <div class="step-header"><span class="step-num">05 · opzionale</span><h2>Installa i Resource Pack</h2></div>
+        <div class="step-header"><span class="step-num">04 · opzionale</span><h2>Installa i Resource Pack</h2></div>
         <ol>
           <li>Scarica <code>resourcepacks.zip</code> dalla <a href="https://drive.google.com/drive/folders/1PGz6Pj-zHA_SCj3PurE3ThTkz9V7AP9N?usp=sharing" target="_blank" rel="noopener">cartella condivisa</a></li>
-          <li>Crea la cartella <code>resourcepacks</code> in <code>~/Library/Application Support/minecraft</code></li>
+          <li>Apri la cartella dell'istanza (come al passo 3) e crea la cartella <code>resourcepacks</code> se non esiste</li>
           <li>Trascina tutto il contenuto dello zip nella cartella</li>
           <li>In gioco: <strong>Opzioni → Resource Pack</strong>, sposta i pack a destra</li>
         </ol>
       </div><hr class="divider">
 
       <div class="step step-optional">
-        <div class="step-header"><span class="step-num">06 · opzionale</span><h2>Installa gli Shader</h2></div>
+        <div class="step-header"><span class="step-num">05 · opzionale</span><h2>Installa gli Shader</h2></div>
         <p>Richiedono un Mac abbastanza potente. Se è datato, salta questo passaggio.</p>
         <ol>
-          <li>Scarica <a href="https://cdn.modrinth.com/data/YL57xq9U/versions/s5eFLITc/iris-1.7.6%2Bmc1.20.1.jar">Iris</a> e mettilo nella cartella <code>mods</code></li>
-          <li>Crea la cartella <code>shaderpacks</code> in <code>~/Library/Application Support/minecraft</code></li>
+          <li>Apri la cartella dell'istanza (come al passo 3) e metti <a href="https://cdn.modrinth.com/data/YL57xq9U/versions/s5eFLITc/iris-1.7.6%2Bmc1.20.1.jar">Iris</a> nella cartella <code>mods</code></li>
+          <li>Crea la cartella <code>shaderpacks</code> dentro la cartella dell'istanza</li>
           <li>Scarica <a href="https://cdn.modrinth.com/data/R6NEzAwj/versions/1ng9gVp7/ComplementaryUnbound_r5.5.1.zip">Complementary Unbound</a> e mettilo in <code>shaderpacks</code></li>
           <li>In gioco: <strong>Opzioni → Shader</strong>, seleziona il pacchetto</li>
         </ol>
       </div><hr class="divider">
 
       <div class="step">
-        <div class="step-header"><span class="step-num">07</span><h2>Avvia il Server</h2></div>
+        <div class="step-header"><span class="step-num">06</span><h2>Avvia il Server</h2></div>
         <ol>
           <li>Apri l'<a href="https://aria-mc-server-972697371927.europe-west8.run.app/" target="_blank" rel="noopener">AriA Panel</a> e clicca <strong>Start</strong></li>
           <li>Aspetta qualche minuto: il pannello mostra lo stato in tempo reale</li>
@@ -244,9 +226,9 @@
       </div><hr class="divider">
 
       <div class="step">
-        <div class="step-header"><span class="step-num">08</span><h2>Collegati al Server</h2></div>
+        <div class="step-header"><span class="step-num">07</span><h2>Collegati al Server</h2></div>
         <ol>
-          <li>Apri il launcher e seleziona il profilo <strong>Fabric 1.20.1</strong></li>
+          <li>In SKLauncher, seleziona la tua istanza Fabric 1.20.1 e clicca <strong>Play</strong></li>
           <li>Nel menu principale: <strong>Multigiocatore → Connessione Diretta</strong></li>
           <li>Incolla l'IP mostrato nell'<a href="https://aria-mc-server-972697371927.europe-west8.run.app/" target="_blank" rel="noopener">AriA Panel</a> (es. <code>1.2.3.4:25565</code>)</li>
           <li>Clicca <strong>Connetti</strong> e buon divertimento!</li>
@@ -257,10 +239,8 @@
       <table class="trouble-table">
         <thead><tr><th>Problema</th><th>Soluzione</th></tr></thead>
         <tbody>
-          <tr><td>Fabric non si apre</td><td>Installa Java (passo 2)</td></tr>
-          <tr><td>macOS blocca il file <code>.jar</code></td><td><strong>Impostazioni di Sistema → Privacy e Sicurezza → Apri comunque</strong></td></tr>
           <tr><td>Il gioco crasha subito</td><td>Elimina la cartella <code>mods</code> e riestrai da zero</td></tr>
-          <tr><td>Non vedo il profilo Fabric</td><td>Rifai il passo 3, versione 1.20.1</td></tr>
+          <tr><td>Non vedo l'istanza Fabric</td><td>Rifai il passo 1 e assicurati di selezionare Fabric versione 1.20.1</td></tr>
           <tr><td>Non riesco a connettermi</td><td>Controlla che l'<a href="https://aria-mc-server-972697371927.europe-west8.run.app/">AriA Panel</a> mostri l'IP</td></tr>
         </tbody>
       </table>
@@ -276,12 +256,15 @@
       <p class="intro">Hey! This guide walks you through setting up Minecraft on Windows step by step. No experience required.</p>
 
       <div class="step">
-        <div class="step-header"><span class="step-num">01</span><h2>Install a Minecraft Launcher</h2></div>
-        <ul>
-          <li><strong>SKLauncher</strong>, recommended if you <strong>don't</strong> own Minecraft: <a href="https://skmedix.pl/" target="_blank" rel="noopener">skmedix.pl</a></li>
-          <li><strong>Official Minecraft Launcher</strong>: <a href="https://www.minecraft.net/en-us/download" target="_blank" rel="noopener">minecraft.net</a></li>
-        </ul>
-        <p class="note">After installing, open the launcher, select version <code>1.20.1</code> and launch it once. Close it as soon as the main menu appears: this just creates the game files.</p>
+        <div class="step-header"><span class="step-num">01</span><h2>Install SKLauncher and create a Fabric instance</h2></div>
+        <p>The <strong>launcher</strong> is the app that starts Minecraft. We recommend <strong>SKLauncher</strong> because it can install Fabric directly:</p>
+        <ol>
+          <li>Download SKLauncher from <a href="https://skmedix.pl/" target="_blank" rel="noopener">skmedix.pl</a> and install it</li>
+          <li>Open SKLauncher and click <strong>Add instance</strong> (the + button)</li>
+          <li>Select <strong>Fabric</strong> as the type and set the version to <code>1.20.1</code></li>
+          <li>Click <strong>Create</strong>, then launch the instance once. Close it as soon as the main menu appears</li>
+        </ol>
+        <p class="note">If you own Minecraft and prefer the <a href="https://www.minecraft.net/en-us/download" target="_blank" rel="noopener">Official Launcher</a>, you'll need to install Fabric separately using the <a href="https://maven.fabricmc.net/net/fabricmc/fabric-installer/1.0.3/fabric-installer-1.0.3.jar">Fabric Installer</a> (version 1.20.1).</p>
       </div><hr class="divider">
 
       <div class="step">
@@ -291,24 +274,13 @@
           <li>Click <strong>Latest LTS release</strong></li>
           <li>Open the installer and keep clicking <strong>Next</strong></li>
         </ol>
-        <p class="note">If the Fabric installer opens with no Java error, you can skip this step.</p>
+        <p class="note">If SKLauncher opens with no Java error, you can skip this step.</p>
       </div><hr class="divider">
 
       <div class="step">
-        <div class="step-header"><span class="step-num">03</span><h2>Install Fabric</h2></div>
+        <div class="step-header"><span class="step-num">03</span><h2>Install the Mods</h2></div>
         <ol>
-          <li>Download the <a href="https://maven.fabricmc.net/net/fabricmc/fabric-installer/1.0.3/fabric-installer-1.0.3.jar">Fabric Installer</a> (<code>.jar</code> file)</li>
-          <li><strong>Double-click</strong> to open it</li>
-          <li>Make sure the version is <code>1.20.1</code></li>
-          <li>Click <strong>Install</strong></li>
-        </ol>
-      </div><hr class="divider">
-
-      <div class="step">
-        <div class="step-header"><span class="step-num">04</span><h2>Install the Mods</h2></div>
-        <ol>
-          <li>Press <code>Win + R</code>, type <code>%appdata%</code>, press <strong>Enter</strong></li>
-          <li>Open the <code>.minecraft</code> folder</li>
+          <li>In SKLauncher, right-click your Fabric 1.20.1 instance and select <strong>Open Folder</strong></li>
           <li>If a <code>mods</code> folder exists, <strong>delete it entirely</strong> (right-click → Delete)</li>
           <li>Create a new empty <code>mods</code> folder</li>
           <li>Download <code>mods.zip</code> from the <a href="https://drive.google.com/drive/folders/1PGz6Pj-zHA_SCj3PurE3ThTkz9V7AP9N?usp=sharing" target="_blank" rel="noopener">shared folder</a> (Google account required)</li>
@@ -317,28 +289,28 @@
       </div><hr class="divider">
 
       <div class="step step-optional">
-        <div class="step-header"><span class="step-num">05 · optional</span><h2>Install Resource Packs</h2></div>
+        <div class="step-header"><span class="step-num">04 · optional</span><h2>Install Resource Packs</h2></div>
         <ol>
           <li>Download <code>resourcepacks.zip</code> from the <a href="https://drive.google.com/drive/folders/1PGz6Pj-zHA_SCj3PurE3ThTkz9V7AP9N?usp=sharing" target="_blank" rel="noopener">shared folder</a></li>
-          <li>Create a <code>resourcepacks</code> folder inside <code>.minecraft</code></li>
+          <li>Open the instance folder (same as step 3) and create a <code>resourcepacks</code> folder if it doesn't exist</li>
           <li>Drag the zip contents into it</li>
           <li>In-game: <strong>Options → Resource Packs</strong>, move packs to the right column</li>
         </ol>
       </div><hr class="divider">
 
       <div class="step step-optional">
-        <div class="step-header"><span class="step-num">06 · optional</span><h2>Install Shaders</h2></div>
+        <div class="step-header"><span class="step-num">05 · optional</span><h2>Install Shaders</h2></div>
         <p>Require a reasonably powerful PC. Skip if your PC is old.</p>
         <ol>
-          <li>Download <a href="https://cdn.modrinth.com/data/YL57xq9U/versions/s5eFLITc/iris-1.7.6%2Bmc1.20.1.jar">Iris</a> and place it in <code>mods</code></li>
-          <li>Create a <code>shaderpacks</code> folder inside <code>.minecraft</code></li>
+          <li>Open the instance folder (same as step 3) and place <a href="https://cdn.modrinth.com/data/YL57xq9U/versions/s5eFLITc/iris-1.7.6%2Bmc1.20.1.jar">Iris</a> in <code>mods</code></li>
+          <li>Create a <code>shaderpacks</code> folder inside the instance folder</li>
           <li>Download <a href="https://cdn.modrinth.com/data/R6NEzAwj/versions/1ng9gVp7/ComplementaryUnbound_r5.5.1.zip">Complementary Unbound</a> and place it in <code>shaderpacks</code></li>
           <li>In-game: <strong>Options → Shaders</strong>, select the pack</li>
         </ol>
       </div><hr class="divider">
 
       <div class="step">
-        <div class="step-header"><span class="step-num">07</span><h2>Start the Server</h2></div>
+        <div class="step-header"><span class="step-num">06</span><h2>Start the Server</h2></div>
         <ol>
           <li>Open the <a href="https://aria-mc-server-972697371927.europe-west8.run.app/" target="_blank" rel="noopener">AriA Panel</a> and click <strong>Start</strong></li>
           <li>Wait a few minutes: the panel shows live status</li>
@@ -348,9 +320,9 @@
       </div><hr class="divider">
 
       <div class="step">
-        <div class="step-header"><span class="step-num">08</span><h2>Join the Server</h2></div>
+        <div class="step-header"><span class="step-num">07</span><h2>Join the Server</h2></div>
         <ol>
-          <li>Open the launcher, select the <strong>Fabric 1.20.1</strong> profile</li>
+          <li>In SKLauncher, select your Fabric 1.20.1 instance and click <strong>Play</strong></li>
           <li>In the main menu: <strong>Multiplayer → Direct Connection</strong></li>
           <li>Paste the IP from the <a href="https://aria-mc-server-972697371927.europe-west8.run.app/" target="_blank" rel="noopener">AriA Panel</a> (e.g. <code>1.2.3.4:25565</code>)</li>
           <li>Click <strong>Join Server</strong> and have fun!</li>
@@ -361,9 +333,8 @@
       <table class="trouble-table">
         <thead><tr><th>Problem</th><th>Solution</th></tr></thead>
         <tbody>
-          <tr><td>Fabric won't open</td><td>Install Java (step 2)</td></tr>
           <tr><td>Game crashes on launch</td><td>Delete <code>mods</code> and re-extract from scratch</td></tr>
-          <tr><td>Fabric profile missing</td><td>Redo step 3, version 1.20.1</td></tr>
+          <tr><td>Fabric instance missing</td><td>Redo step 1 and make sure you selected Fabric version 1.20.1</td></tr>
           <tr><td>Can't connect</td><td>Check the <a href="https://aria-mc-server-972697371927.europe-west8.run.app/">AriA Panel</a> shows an IP</td></tr>
         </tbody>
       </table>
@@ -379,36 +350,28 @@
       <p class="intro">Hey! This guide walks you through setting up Minecraft on macOS step by step. No experience required.</p>
 
       <div class="step">
-        <div class="step-header"><span class="step-num">01</span><h2>Install a Minecraft Launcher</h2></div>
-        <ul>
-          <li><strong>SKLauncher</strong>, recommended if you <strong>don't</strong> own Minecraft: <a href="https://skmedix.pl/" target="_blank" rel="noopener">skmedix.pl</a> (choose macOS)</li>
-          <li><strong>Official Minecraft Launcher</strong>: <a href="https://www.minecraft.net/en-us/download" target="_blank" rel="noopener">minecraft.net</a></li>
-        </ul>
-        <p class="note">After installing, open the launcher, select version <code>1.20.1</code> and launch it once.</p>
+        <div class="step-header"><span class="step-num">01</span><h2>Install SKLauncher and create a Fabric instance</h2></div>
+        <p>The <strong>launcher</strong> is the app that starts Minecraft. We recommend <strong>SKLauncher</strong> because it can install Fabric directly:</p>
+        <ol>
+          <li>Download SKLauncher from <a href="https://skmedix.pl/" target="_blank" rel="noopener">skmedix.pl</a> (choose macOS) and install it</li>
+          <li>Open SKLauncher and click <strong>Add instance</strong> (the + button)</li>
+          <li>Select <strong>Fabric</strong> as the type and set the version to <code>1.20.1</code></li>
+          <li>Click <strong>Create</strong>, then launch the instance once. Close it as soon as the main menu appears</li>
+        </ol>
+        <p class="note">If you own Minecraft and prefer the <a href="https://www.minecraft.net/en-us/download" target="_blank" rel="noopener">Official Launcher</a>, you'll need to install Fabric separately using the <a href="https://maven.fabricmc.net/net/fabricmc/fabric-installer/1.0.3/fabric-installer-1.0.3.jar">Fabric Installer</a> (version 1.20.1).</p>
       </div><hr class="divider">
 
       <div class="step">
         <div class="step-header"><span class="step-num">02</span><h2>Install Java</h2></div>
         <p><strong>Option A, Homebrew:</strong> <code>brew install --cask temurin</code></p>
         <p style="margin-top:0.5rem;"><strong>Option B, Manual:</strong> <a href="https://adoptium.net/" target="_blank" rel="noopener">adoptium.net</a> → <strong>Latest LTS release</strong></p>
-        <p class="note">If Fabric opens with no Java error, skip this step.</p>
+        <p class="note">If SKLauncher opens with no Java error, skip this step.</p>
       </div><hr class="divider">
 
       <div class="step">
-        <div class="step-header"><span class="step-num">03</span><h2>Install Fabric</h2></div>
+        <div class="step-header"><span class="step-num">03</span><h2>Install the Mods</h2></div>
         <ol>
-          <li>Download the <a href="https://maven.fabricmc.net/net/fabricmc/fabric-installer/1.0.3/fabric-installer-1.0.3.jar">Fabric Installer</a> (<code>.jar</code> file)</li>
-          <li><strong>Double-click</strong> to open it<br><span style="font-size:0.78rem;color:#5a6e8a;">If that fails: <code>java -jar ~/Downloads/fabric-installer-1.0.3.jar</code></span></li>
-          <li>Make sure the version is <code>1.20.1</code></li>
-          <li>Click <strong>Install</strong></li>
-        </ol>
-        <p class="note">If macOS blocks the file: <strong>System Settings → Privacy & Security → Open Anyway</strong>.</p>
-      </div><hr class="divider">
-
-      <div class="step">
-        <div class="step-header"><span class="step-num">04</span><h2>Install the Mods</h2></div>
-        <p style="margin-bottom:0.5rem;">Open your Minecraft folder: <code>Cmd + Space</code> → Finder → <strong>Go → Go to Folder</strong> → <code>~/Library/Application Support/minecraft</code></p>
-        <ol>
+          <li>In SKLauncher, right-click your Fabric 1.20.1 instance and select <strong>Open Folder</strong></li>
           <li>If a <code>mods</code> folder exists, <strong>delete it entirely</strong> (right-click → Move to Trash)</li>
           <li>Create a new empty <code>mods</code> folder</li>
           <li>Download <code>mods.zip</code> from the <a href="https://drive.google.com/drive/folders/1PGz6Pj-zHA_SCj3PurE3ThTkz9V7AP9N?usp=sharing" target="_blank" rel="noopener">shared folder</a></li>
@@ -417,28 +380,28 @@
       </div><hr class="divider">
 
       <div class="step step-optional">
-        <div class="step-header"><span class="step-num">05 · optional</span><h2>Install Resource Packs</h2></div>
+        <div class="step-header"><span class="step-num">04 · optional</span><h2>Install Resource Packs</h2></div>
         <ol>
           <li>Download <code>resourcepacks.zip</code> from the <a href="https://drive.google.com/drive/folders/1PGz6Pj-zHA_SCj3PurE3ThTkz9V7AP9N?usp=sharing" target="_blank" rel="noopener">shared folder</a></li>
-          <li>Create a <code>resourcepacks</code> folder inside the minecraft folder</li>
+          <li>Open the instance folder (same as step 3) and create a <code>resourcepacks</code> folder if it doesn't exist</li>
           <li>Drag the zip contents into it</li>
           <li>In-game: <strong>Options → Resource Packs</strong>, move packs to the right column</li>
         </ol>
       </div><hr class="divider">
 
       <div class="step step-optional">
-        <div class="step-header"><span class="step-num">06 · optional</span><h2>Install Shaders</h2></div>
+        <div class="step-header"><span class="step-num">05 · optional</span><h2>Install Shaders</h2></div>
         <p>Require a reasonably powerful Mac. Skip if your Mac is older.</p>
         <ol>
-          <li>Download <a href="https://cdn.modrinth.com/data/YL57xq9U/versions/s5eFLITc/iris-1.7.6%2Bmc1.20.1.jar">Iris</a> and place it in <code>mods</code></li>
-          <li>Create a <code>shaderpacks</code> folder inside the minecraft folder</li>
+          <li>Open the instance folder (same as step 3) and place <a href="https://cdn.modrinth.com/data/YL57xq9U/versions/s5eFLITc/iris-1.7.6%2Bmc1.20.1.jar">Iris</a> in <code>mods</code></li>
+          <li>Create a <code>shaderpacks</code> folder inside the instance folder</li>
           <li>Download <a href="https://cdn.modrinth.com/data/R6NEzAwj/versions/1ng9gVp7/ComplementaryUnbound_r5.5.1.zip">Complementary Unbound</a> and place it in <code>shaderpacks</code></li>
           <li>In-game: <strong>Options → Shaders</strong>, select the pack</li>
         </ol>
       </div><hr class="divider">
 
       <div class="step">
-        <div class="step-header"><span class="step-num">07</span><h2>Start the Server</h2></div>
+        <div class="step-header"><span class="step-num">06</span><h2>Start the Server</h2></div>
         <ol>
           <li>Open the <a href="https://aria-mc-server-972697371927.europe-west8.run.app/" target="_blank" rel="noopener">AriA Panel</a> and click <strong>Start</strong></li>
           <li>Wait a few minutes: the panel shows live status</li>
@@ -448,9 +411,9 @@
       </div><hr class="divider">
 
       <div class="step">
-        <div class="step-header"><span class="step-num">08</span><h2>Join the Server</h2></div>
+        <div class="step-header"><span class="step-num">07</span><h2>Join the Server</h2></div>
         <ol>
-          <li>Open the launcher, select the <strong>Fabric 1.20.1</strong> profile</li>
+          <li>In SKLauncher, select your Fabric 1.20.1 instance and click <strong>Play</strong></li>
           <li>In the main menu: <strong>Multiplayer → Direct Connection</strong></li>
           <li>Paste the IP from the <a href="https://aria-mc-server-972697371927.europe-west8.run.app/" target="_blank" rel="noopener">AriA Panel</a> (e.g. <code>1.2.3.4:25565</code>)</li>
           <li>Click <strong>Join Server</strong> and have fun!</li>
@@ -461,10 +424,8 @@
       <table class="trouble-table">
         <thead><tr><th>Problem</th><th>Solution</th></tr></thead>
         <tbody>
-          <tr><td>Fabric won't open</td><td>Install Java (step 2)</td></tr>
-          <tr><td>macOS blocks the <code>.jar</code></td><td><strong>System Settings → Privacy & Security → Open Anyway</strong></td></tr>
           <tr><td>Game crashes on launch</td><td>Delete <code>mods</code> and re-extract from scratch</td></tr>
-          <tr><td>Fabric profile missing</td><td>Redo step 3, version 1.20.1</td></tr>
+          <tr><td>Fabric instance missing</td><td>Redo step 1 and make sure you selected Fabric version 1.20.1</td></tr>
           <tr><td>Can't connect</td><td>Check the <a href="https://aria-mc-server-972697371927.europe-west8.run.app/">AriA Panel</a> shows an IP</td></tr>
         </tbody>
       </table>
