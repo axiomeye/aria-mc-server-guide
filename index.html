@@ -15,9 +15,9 @@
     }
     .toggle-group {
       display: flex;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(99,130,190,0.12);
-      border-radius: 10px;
+      background: rgba(42, 32, 22, 0.9);
+      border: 2px solid rgba(139, 109, 68, 0.3);
+      border-radius: 4px;
       padding: 0.25rem;
       gap: 0.25rem;
     }
@@ -25,33 +25,39 @@
       flex: 1;
       padding: 0.45rem 0.5rem;
       border: none;
-      border-radius: 7px;
+      border-radius: 3px;
       background: transparent;
-      color: #5a6e8a;
-      font-family: 'Inter', sans-serif;
+      color: #9a8a72;
+      font-family: 'Inter', system-ui, sans-serif;
       font-size: 0.82rem;
       font-weight: 600;
       cursor: pointer;
       transition: background 0.15s, color 0.15s;
     }
     .toggle-btn.active {
-      background: rgba(59,130,246,0.15);
-      color: #7eb3ff;
+      background: rgba(212, 118, 10, 0.25);
+      color: #f0c040;
     }
-    .toggle-btn:hover:not(.active) { color: #94a3b8; }
+    .toggle-btn:hover:not(.active) { color: #e8dcc8; }
 
-    .world-pick { background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.09);
-      border-radius: 12px; padding: 16px 18px; margin: 0 0 22px; }
-    .world-pick h2 { margin: 0 0 6px; font-size: 1.05rem; }
-    .world-pick p { margin: 0 0 12px; font-size: .9rem; opacity: .85; }
+    .world-pick {
+      background: rgba(42, 32, 22, 0.9);
+      border: 2px solid rgba(139, 109, 68, 0.3);
+      border-radius: 4px;
+      padding: 16px 18px;
+      margin: 0 0 22px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+    .world-pick h2 { margin: 0 0 6px; font-size: 1.05rem; color: #e8dcc8; }
+    .world-pick p { margin: 0 0 12px; font-size: .9rem; color: #9a8a72; }
     .world-pick table { width: 100%; border-collapse: collapse; font-size: .85rem; }
-    .world-pick th, .world-pick td { text-align: left; padding: 6px 8px; border-bottom: 1px solid rgba(255,255,255,.07); }
-    .world-pick th { font-weight: 600; opacity: .7; font-size: .78rem; text-transform: uppercase; letter-spacing: .03em; }
+    .world-pick th, .world-pick td { text-align: left; padding: 6px 8px; border-bottom: 1px solid rgba(139, 109, 68, 0.15); color: #e8dcc8; }
+    .world-pick th { font-weight: 600; color: #9a8a72; font-size: .78rem; text-transform: uppercase; letter-spacing: .03em; }
     .world-pick tr:last-child td { border-bottom: none; }
     @media (max-width: 560px) { .world-pick table, .world-pick thead, .world-pick tbody,
       .world-pick tr, .world-pick th, .world-pick td { display: block; }
       .world-pick thead { display: none; }
-      .world-pick tr { margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,.1); } }
+      .world-pick tr { margin-bottom: 10px; border-bottom: 1px solid rgba(139, 109, 68, 0.2); } }
   </style>
 </head>
 <body>
@@ -86,9 +92,10 @@
         <p>Il <strong>launcher</strong> è il programma che avvia Minecraft. Consigliamo <strong>SKLauncher</strong> perché permette di installare Fabric direttamente:</p>
         <ol>
           <li>Scarica SKLauncher da <a href="https://skmedix.pl/" target="_blank" rel="noopener">skmedix.pl</a> e installalo</li>
-          <li>Apri SKLauncher e clicca <strong>Add instance</strong> (il simbolo +)</li>
-          <li>Seleziona <strong>Fabric</strong> come tipo e imposta la versione su quella del tuo mondo (<code>1.20.1</code>, <code>1.21.1</code> o <code>26.2</code>)</li>
-          <li>Clicca <strong>Create</strong>, poi avvia l'istanza una volta. Chiudila subito appena compare il menu principale</li>
+          <li>Apri SKLauncher e vai nella scheda <strong>Installations Manager</strong></li>
+          <li>Clicca <strong>+ (New Installation)</strong> e dalle un nome</li>
+          <li>Scegli <strong>Fabric</strong> come tipo e seleziona la versione del tuo mondo (<code>1.20.1</code>, <code>1.21.1</code> o <code>26.2</code>)</li>
+          <li>Clicca <strong>Save</strong>, selezionala nella home e avviala una volta per scaricare i file. Chiudila subito appena compare il menu principale</li>
         </ol>
         <p class="note">Se hai già acquistato Minecraft e preferisci il <a href="https://www.minecraft.net/it-it/download" target="_blank" rel="noopener">Launcher Ufficiale</a>, dovrai installare Java da <a href="https://adoptium.net/" target="_blank" rel="noopener">adoptium.net</a> e Fabric manualmente tramite il <a href="https://maven.fabricmc.net/net/fabricmc/fabric-installer/1.0.3/fabric-installer-1.0.3.jar">Fabric Installer</a> (versione 1.20.1).</p>
       </div><hr class="divider">
@@ -105,29 +112,8 @@
         </ol>
       </div><hr class="divider">
 
-      <div class="step step-optional">
-        <div class="step-header"><span class="step-num">03 · opzionale</span><h2>Installa i Resource Pack</h2></div>
-        <ol>
-          <li>Scarica <code>resourcepacks.zip</code> dalla <a href="https://drive.google.com/drive/folders/1PGz6Pj-zHA_SCj3PurE3ThTkz9V7AP9N?usp=sharing" target="_blank" rel="noopener">cartella condivisa</a></li>
-          <li>Apri la cartella dell'istanza (come al passo 2) e crea la cartella <code>resourcepacks</code> se non esiste</li>
-          <li>Trascina tutto il contenuto dello zip nella cartella <code>resourcepacks</code></li>
-          <li>In gioco: <strong>Opzioni → Resource Pack</strong>, sposta i pack a destra per attivarli</li>
-        </ol>
-      </div><hr class="divider">
-
-      <div class="step step-optional">
-        <div class="step-header"><span class="step-num">04 · opzionale</span><h2>Installa gli Shader</h2></div>
-        <p>Richiedono un PC abbastanza potente. Se il tuo PC è datato, salta questo passaggio.</p>
-        <ol>
-          <li>Apri la cartella dell'istanza (come al passo 2) e metti <a href="https://cdn.modrinth.com/data/YL57xq9U/versions/s5eFLITc/iris-1.7.6%2Bmc1.20.1.jar">Iris</a> nella cartella <code>mods</code></li>
-          <li>Crea la cartella <code>shaderpacks</code> dentro la cartella dell'istanza</li>
-          <li>Scarica <a href="https://cdn.modrinth.com/data/R6NEzAwj/versions/1ng9gVp7/ComplementaryUnbound_r5.5.1.zip">Complementary Unbound</a> e mettilo in <code>shaderpacks</code></li>
-          <li>In gioco: <strong>Opzioni → Shader</strong>, seleziona il pacchetto</li>
-        </ol>
-      </div><hr class="divider">
-
       <div class="step">
-        <div class="step-header"><span class="step-num">05</span><h2>Avvia il Server</h2></div>
+        <div class="step-header"><span class="step-num">03</span><h2>Avvia il Server</h2></div>
         <ol>
           <li>Apri l'<a href="https://aria-mc-server-972697371927.europe-west8.run.app/" target="_blank" rel="noopener">AriA Panel</a> e clicca <strong>Start</strong></li>
           <li>Aspetta qualche minuto: il pannello mostra lo stato in tempo reale</li>
@@ -137,9 +123,9 @@
       </div><hr class="divider">
 
       <div class="step">
-        <div class="step-header"><span class="step-num">06</span><h2>Collegati al Server</h2></div>
+        <div class="step-header"><span class="step-num">04</span><h2>Collegati al Server</h2></div>
         <ol>
-          <li>In SKLauncher, seleziona la tua istanza Fabric 1.20.1 e clicca <strong>Play</strong></li>
+          <li>In SKLauncher, seleziona la tua nuova istanza e clicca <strong>Play</strong></li>
           <li>Nel menu principale: <strong>Multigiocatore → Connessione Diretta</strong></li>
           <li>Incolla l'IP mostrato nell'<a href="https://aria-mc-server-972697371927.europe-west8.run.app/" target="_blank" rel="noopener">AriA Panel</a> (es. <code>1.2.3.4:25565</code>)</li>
           <li>Clicca <strong>Connetti</strong> e buon divertimento!</li>
@@ -171,10 +157,11 @@
         <div class="step-header"><span class="step-num">01</span><h2>Installa SKLauncher e crea un'istanza Fabric</h2></div>
         <p>Il <strong>launcher</strong> è il programma che avvia Minecraft. Consigliamo <strong>SKLauncher</strong> perché permette di installare Fabric direttamente:</p>
         <ol>
-          <li>Scarica SKLauncher da <a href="https://skmedix.pl/" target="_blank" rel="noopener">skmedix.pl</a> (scegli la versione macOS) e installalo</li>
-          <li>Apri SKLauncher e clicca <strong>Add instance</strong> (il simbolo +)</li>
-          <li>Seleziona <strong>Fabric</strong> come tipo e imposta la versione su quella del tuo mondo (<code>1.20.1</code>, <code>1.21.1</code> o <code>26.2</code>)</li>
-          <li>Clicca <strong>Create</strong>, poi avvia l'istanza una volta. Chiudila subito appena compare il menu principale</li>
+          <li>Scarica SKLauncher da <a href="https://skmedix.pl/" target="_blank" rel="noopener">skmedix.pl</a> e installalo</li>
+          <li>Apri SKLauncher e vai nella scheda <strong>Installations Manager</strong></li>
+          <li>Clicca <strong>+ (New Installation)</strong> e dalle un nome</li>
+          <li>Scegli <strong>Fabric</strong> come tipo e seleziona la versione del tuo mondo (<code>1.20.1</code>, <code>1.21.1</code> o <code>26.2</code>)</li>
+          <li>Clicca <strong>Save</strong>, selezionala nella home e avviala una volta per scaricare i file. Chiudila subito appena compare il menu principale</li>
         </ol>
         <p class="note">Se hai già acquistato Minecraft e preferisci il <a href="https://www.minecraft.net/it-it/download" target="_blank" rel="noopener">Launcher Ufficiale</a>, dovrai installare Java da <a href="https://adoptium.net/" target="_blank" rel="noopener">adoptium.net</a> e Fabric manualmente tramite il <a href="https://maven.fabricmc.net/net/fabricmc/fabric-installer/1.0.3/fabric-installer-1.0.3.jar">Fabric Installer</a> (versione 1.20.1).</p>
       </div><hr class="divider">
@@ -191,29 +178,8 @@
         </ol>
       </div><hr class="divider">
 
-      <div class="step step-optional">
-        <div class="step-header"><span class="step-num">03 · opzionale</span><h2>Installa i Resource Pack</h2></div>
-        <ol>
-          <li>Scarica <code>resourcepacks.zip</code> dalla <a href="https://drive.google.com/drive/folders/1PGz6Pj-zHA_SCj3PurE3ThTkz9V7AP9N?usp=sharing" target="_blank" rel="noopener">cartella condivisa</a></li>
-          <li>Apri la cartella dell'istanza (come al passo 2) e crea la cartella <code>resourcepacks</code> se non esiste</li>
-          <li>Trascina tutto il contenuto dello zip nella cartella</li>
-          <li>In gioco: <strong>Opzioni → Resource Pack</strong>, sposta i pack a destra</li>
-        </ol>
-      </div><hr class="divider">
-
-      <div class="step step-optional">
-        <div class="step-header"><span class="step-num">04 · opzionale</span><h2>Installa gli Shader</h2></div>
-        <p>Richiedono un Mac abbastanza potente. Se è datato, salta questo passaggio.</p>
-        <ol>
-          <li>Apri la cartella dell'istanza (come al passo 2) e metti <a href="https://cdn.modrinth.com/data/YL57xq9U/versions/s5eFLITc/iris-1.7.6%2Bmc1.20.1.jar">Iris</a> nella cartella <code>mods</code></li>
-          <li>Crea la cartella <code>shaderpacks</code> dentro la cartella dell'istanza</li>
-          <li>Scarica <a href="https://cdn.modrinth.com/data/R6NEzAwj/versions/1ng9gVp7/ComplementaryUnbound_r5.5.1.zip">Complementary Unbound</a> e mettilo in <code>shaderpacks</code></li>
-          <li>In gioco: <strong>Opzioni → Shader</strong>, seleziona il pacchetto</li>
-        </ol>
-      </div><hr class="divider">
-
       <div class="step">
-        <div class="step-header"><span class="step-num">05</span><h2>Avvia il Server</h2></div>
+        <div class="step-header"><span class="step-num">03</span><h2>Avvia il Server</h2></div>
         <ol>
           <li>Apri l'<a href="https://aria-mc-server-972697371927.europe-west8.run.app/" target="_blank" rel="noopener">AriA Panel</a> e clicca <strong>Start</strong></li>
           <li>Aspetta qualche minuto: il pannello mostra lo stato in tempo reale</li>
@@ -223,9 +189,9 @@
       </div><hr class="divider">
 
       <div class="step">
-        <div class="step-header"><span class="step-num">06</span><h2>Collegati al Server</h2></div>
+        <div class="step-header"><span class="step-num">04</span><h2>Collegati al Server</h2></div>
         <ol>
-          <li>In SKLauncher, seleziona la tua istanza Fabric 1.20.1 e clicca <strong>Play</strong></li>
+          <li>In SKLauncher, seleziona la tua nuova istanza e clicca <strong>Play</strong></li>
           <li>Nel menu principale: <strong>Multigiocatore → Connessione Diretta</strong></li>
           <li>Incolla l'IP mostrato nell'<a href="https://aria-mc-server-972697371927.europe-west8.run.app/" target="_blank" rel="noopener">AriA Panel</a> (es. <code>1.2.3.4:25565</code>)</li>
           <li>Clicca <strong>Connetti</strong> e buon divertimento!</li>
@@ -258,9 +224,10 @@
         <p>The <strong>launcher</strong> is the app that starts Minecraft. We recommend <strong>SKLauncher</strong> because it can install Fabric directly:</p>
         <ol>
           <li>Download SKLauncher from <a href="https://skmedix.pl/" target="_blank" rel="noopener">skmedix.pl</a> and install it</li>
-          <li>Open SKLauncher and click <strong>Add instance</strong> (the + button)</li>
-          <li>Select <strong>Fabric</strong> as the type and set the version to your world's (<code>1.20.1</code>, <code>1.21.1</code> or <code>26.2</code>)</li>
-          <li>Click <strong>Create</strong>, then launch the instance once. Close it as soon as the main menu appears</li>
+          <li>Open SKLauncher and go to the <strong>Installations Manager</strong> tab</li>
+          <li>Click <strong>+ (New Installation)</strong> and give it a name</li>
+          <li>Select <strong>Fabric</strong> as the type and choose your world's version (<code>1.20.1</code>, <code>1.21.1</code> or <code>26.2</code>)</li>
+          <li>Click <strong>Save</strong>, select it on the home screen and launch it once to download the files. Close it as soon as the main menu appears</li>
         </ol>
         <p class="note">If you own Minecraft and prefer the <a href="https://www.minecraft.net/en-us/download" target="_blank" rel="noopener">Official Launcher</a>, you'll need to install Java from <a href="https://adoptium.net/" target="_blank" rel="noopener">adoptium.net</a> and Fabric separately using the <a href="https://maven.fabricmc.net/net/fabricmc/fabric-installer/1.0.3/fabric-installer-1.0.3.jar">Fabric Installer</a> (version 1.20.1).</p>
       </div><hr class="divider">
@@ -276,29 +243,8 @@
         </ol>
       </div><hr class="divider">
 
-      <div class="step step-optional">
-        <div class="step-header"><span class="step-num">03 · optional</span><h2>Install Resource Packs</h2></div>
-        <ol>
-          <li>Download <code>resourcepacks.zip</code> from the <a href="https://drive.google.com/drive/folders/1PGz6Pj-zHA_SCj3PurE3ThTkz9V7AP9N?usp=sharing" target="_blank" rel="noopener">shared folder</a></li>
-          <li>Open the instance folder (same as step 2) and create a <code>resourcepacks</code> folder if it doesn't exist</li>
-          <li>Drag the zip contents into it</li>
-          <li>In-game: <strong>Options → Resource Packs</strong>, move packs to the right column</li>
-        </ol>
-      </div><hr class="divider">
-
-      <div class="step step-optional">
-        <div class="step-header"><span class="step-num">04 · optional</span><h2>Install Shaders</h2></div>
-        <p>Require a reasonably powerful PC. Skip if your PC is old.</p>
-        <ol>
-          <li>Open the instance folder (same as step 2) and place <a href="https://cdn.modrinth.com/data/YL57xq9U/versions/s5eFLITc/iris-1.7.6%2Bmc1.20.1.jar">Iris</a> in <code>mods</code></li>
-          <li>Create a <code>shaderpacks</code> folder inside the instance folder</li>
-          <li>Download <a href="https://cdn.modrinth.com/data/R6NEzAwj/versions/1ng9gVp7/ComplementaryUnbound_r5.5.1.zip">Complementary Unbound</a> and place it in <code>shaderpacks</code></li>
-          <li>In-game: <strong>Options → Shaders</strong>, select the pack</li>
-        </ol>
-      </div><hr class="divider">
-
       <div class="step">
-        <div class="step-header"><span class="step-num">05</span><h2>Start the Server</h2></div>
+        <div class="step-header"><span class="step-num">03</span><h2>Start the Server</h2></div>
         <ol>
           <li>Open the <a href="https://aria-mc-server-972697371927.europe-west8.run.app/" target="_blank" rel="noopener">AriA Panel</a> and click <strong>Start</strong></li>
           <li>Wait a few minutes: the panel shows live status</li>
@@ -308,9 +254,9 @@
       </div><hr class="divider">
 
       <div class="step">
-        <div class="step-header"><span class="step-num">06</span><h2>Join the Server</h2></div>
+        <div class="step-header"><span class="step-num">04</span><h2>Join the Server</h2></div>
         <ol>
-          <li>In SKLauncher, select your Fabric 1.20.1 instance and click <strong>Play</strong></li>
+          <li>In SKLauncher, select your new instance and click <strong>Play</strong></li>
           <li>In the main menu: <strong>Multiplayer → Direct Connection</strong></li>
           <li>Paste the IP from the <a href="https://aria-mc-server-972697371927.europe-west8.run.app/" target="_blank" rel="noopener">AriA Panel</a> (e.g. <code>1.2.3.4:25565</code>)</li>
           <li>Click <strong>Join Server</strong> and have fun!</li>
@@ -342,10 +288,11 @@
         <div class="step-header"><span class="step-num">01</span><h2>Install SKLauncher and create a Fabric instance</h2></div>
         <p>The <strong>launcher</strong> is the app that starts Minecraft. We recommend <strong>SKLauncher</strong> because it can install Fabric directly:</p>
         <ol>
-          <li>Download SKLauncher from <a href="https://skmedix.pl/" target="_blank" rel="noopener">skmedix.pl</a> (choose macOS) and install it</li>
-          <li>Open SKLauncher and click <strong>Add instance</strong> (the + button)</li>
-          <li>Select <strong>Fabric</strong> as the type and set the version to your world's (<code>1.20.1</code>, <code>1.21.1</code> or <code>26.2</code>)</li>
-          <li>Click <strong>Create</strong>, then launch the instance once. Close it as soon as the main menu appears</li>
+          <li>Download SKLauncher from <a href="https://skmedix.pl/" target="_blank" rel="noopener">skmedix.pl</a> and install it</li>
+          <li>Open SKLauncher and go to the <strong>Installations Manager</strong> tab</li>
+          <li>Click <strong>+ (New Installation)</strong> and give it a name</li>
+          <li>Select <strong>Fabric</strong> as the type and choose your world's version (<code>1.20.1</code>, <code>1.21.1</code> or <code>26.2</code>)</li>
+          <li>Click <strong>Save</strong>, select it on the home screen and launch it once to download the files. Close it as soon as the main menu appears</li>
         </ol>
         <p class="note">If you own Minecraft and prefer the <a href="https://www.minecraft.net/en-us/download" target="_blank" rel="noopener">Official Launcher</a>, you'll need to install Java from <a href="https://adoptium.net/" target="_blank" rel="noopener">adoptium.net</a> and Fabric separately using the <a href="https://maven.fabricmc.net/net/fabricmc/fabric-installer/1.0.3/fabric-installer-1.0.3.jar">Fabric Installer</a> (version 1.20.1).</p>
       </div><hr class="divider">
@@ -361,29 +308,8 @@
         </ol>
       </div><hr class="divider">
 
-      <div class="step step-optional">
-        <div class="step-header"><span class="step-num">03 · optional</span><h2>Install Resource Packs</h2></div>
-        <ol>
-          <li>Download <code>resourcepacks.zip</code> from the <a href="https://drive.google.com/drive/folders/1PGz6Pj-zHA_SCj3PurE3ThTkz9V7AP9N?usp=sharing" target="_blank" rel="noopener">shared folder</a></li>
-          <li>Open the instance folder (same as step 2) and create a <code>resourcepacks</code> folder if it doesn't exist</li>
-          <li>Drag the zip contents into it</li>
-          <li>In-game: <strong>Options → Resource Packs</strong>, move packs to the right column</li>
-        </ol>
-      </div><hr class="divider">
-
-      <div class="step step-optional">
-        <div class="step-header"><span class="step-num">04 · optional</span><h2>Install Shaders</h2></div>
-        <p>Require a reasonably powerful Mac. Skip if your Mac is older.</p>
-        <ol>
-          <li>Open the instance folder (same as step 2) and place <a href="https://cdn.modrinth.com/data/YL57xq9U/versions/s5eFLITc/iris-1.7.6%2Bmc1.20.1.jar">Iris</a> in <code>mods</code></li>
-          <li>Create a <code>shaderpacks</code> folder inside the instance folder</li>
-          <li>Download <a href="https://cdn.modrinth.com/data/R6NEzAwj/versions/1ng9gVp7/ComplementaryUnbound_r5.5.1.zip">Complementary Unbound</a> and place it in <code>shaderpacks</code></li>
-          <li>In-game: <strong>Options → Shaders</strong>, select the pack</li>
-        </ol>
-      </div><hr class="divider">
-
       <div class="step">
-        <div class="step-header"><span class="step-num">05</span><h2>Start the Server</h2></div>
+        <div class="step-header"><span class="step-num">03</span><h2>Start the Server</h2></div>
         <ol>
           <li>Open the <a href="https://aria-mc-server-972697371927.europe-west8.run.app/" target="_blank" rel="noopener">AriA Panel</a> and click <strong>Start</strong></li>
           <li>Wait a few minutes: the panel shows live status</li>
@@ -393,9 +319,9 @@
       </div><hr class="divider">
 
       <div class="step">
-        <div class="step-header"><span class="step-num">06</span><h2>Join the Server</h2></div>
+        <div class="step-header"><span class="step-num">04</span><h2>Join the Server</h2></div>
         <ol>
-          <li>In SKLauncher, select your Fabric 1.20.1 instance and click <strong>Play</strong></li>
+          <li>In SKLauncher, select your new instance and click <strong>Play</strong></li>
           <li>In the main menu: <strong>Multiplayer → Direct Connection</strong></li>
           <li>Paste the IP from the <a href="https://aria-mc-server-972697371927.europe-west8.run.app/" target="_blank" rel="noopener">AriA Panel</a> (e.g. <code>1.2.3.4:25565</code>)</li>
           <li>Click <strong>Join Server</strong> and have fun!</li>
