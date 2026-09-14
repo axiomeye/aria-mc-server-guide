@@ -107,6 +107,20 @@
       <div class="step">
         <div class="step-header"><span class="step-num">02</span><h2>Installa le Mod</h2></div>
         <p>Le mod richieste dal server: senza di esse non ti farà connettere.</p>
+        <p class="note"><strong>Scorciatoia:</strong> apri PowerShell (cerca "PowerShell" nel menu Start), incolla lo script qui sotto e premi Invio. Prepara la cartella <code>mods</code> corretta e apre sia la cartella che Google Drive, cosi devi solo scaricare lo zip e trascinarlo dentro.</p>
+        <div class="script-box">
+          <button class="script-copy-btn" onclick="copyScript(this, 'ps-it-win')">Copia</button>
+          <pre id="ps-it-win">Write-Host "Quale mondo AriA? [1] Classic  [2] Cobblemon  [3] Latest"
+$choice = Read-Host "Scrivi 1, 2 o 3"
+$world = switch ($choice) { "1" {"classic"} "2" {"cobblemon"} "3" {"latest"} default {"classic"} }
+$gd = "$env:APPDATA\.minecraft-aria-$world"
+Remove-Item "$gd\mods" -Recurse -Force -ErrorAction SilentlyContinue
+New-Item -ItemType Directory -Path "$gd\mods" -Force | Out-Null
+Start-Process "https://drive.google.com/drive/folders/1PGz6Pj-zHA_SCj3PurE3ThTkz9V7AP9N?usp=sharing"
+Start-Process explorer.exe $gd
+Write-Host "Fatto! Scarica lo zip del tuo mondo dalla scheda Drive, aprilo, seleziona tutto e trascinalo nella cartella mods appena apertasi."</pre>
+        </div>
+        <p class="note">Preferisci farlo a mano? Segui questi passaggi:</p>
         <ol>
           <li>In SKLauncher, fai clic destro sulla tua istanza Fabric e seleziona <strong>Open Folder</strong></li>
           <li>Se esiste già una cartella <code>mods</code>, <strong>eliminala completamente</strong> (clic destro → Elimina)</li>
@@ -141,6 +155,7 @@
         <thead><tr><th>Problema</th><th>Soluzione</th></tr></thead>
         <tbody>
           <tr><td>Il gioco crasha subito</td><td>Elimina la cartella <code>mods</code> e riestrai da zero</td></tr>
+          <tr><td>"Connection Lost" con "unknown registry entries" al momento di connetterti</td><td>Le mod installate non corrispondono più a quelle del server (es. una mod è stata aggiunta o rimossa di recente). Elimina la cartella <code>mods</code>, riscarica lo zip più recente dalla <a href="https://drive.google.com/drive/folders/1PGz6Pj-zHA_SCj3PurE3ThTkz9V7AP9N?usp=sharing" target="_blank" rel="noopener">cartella condivisa</a> ed estrai di nuovo tutto — non basta aggiungere solo le mod nuove</td></tr>
           <tr><td>Non vedo l'istanza Fabric</td><td>Rifai il passo 1 e assicurati di selezionare Fabric e la versione del tuo mondo (1.20.1, 1.21.1 o 26.2)</td></tr>
           <tr><td>Vedo mod strane, o di un altro mondo</td><td>Non hai impostato una Game Directory separata per questa istanza (vedi passo 1) — le tue installazioni stanno condividendo la cartella <code>mods</code></td></tr>
           <tr><td>Non riesco a connettermi</td><td>Controlla che l'<a href="https://aria-mc-server-972697371927.europe-west8.run.app/">AriA Panel</a> mostri l'IP</td></tr>
@@ -212,6 +227,7 @@
         <thead><tr><th>Problema</th><th>Soluzione</th></tr></thead>
         <tbody>
           <tr><td>Il gioco crasha subito</td><td>Elimina la cartella <code>mods</code> e riestrai da zero</td></tr>
+          <tr><td>"Connection Lost" con "unknown registry entries" al momento di connetterti</td><td>Le mod installate non corrispondono più a quelle del server (es. una mod è stata aggiunta o rimossa di recente). Elimina la cartella <code>mods</code>, riscarica lo zip più recente dalla <a href="https://drive.google.com/drive/folders/1PGz6Pj-zHA_SCj3PurE3ThTkz9V7AP9N?usp=sharing" target="_blank" rel="noopener">cartella condivisa</a> ed estrai di nuovo tutto — non basta aggiungere solo le mod nuove</td></tr>
           <tr><td>Non vedo l'istanza Fabric</td><td>Rifai il passo 1 e assicurati di selezionare Fabric e la versione del tuo mondo (1.20.1, 1.21.1 o 26.2)</td></tr>
           <tr><td>Vedo mod strane, o di un altro mondo</td><td>Non hai impostato una Game Directory separata per questa istanza (vedi passo 1) — le tue installazioni stanno condividendo la cartella <code>mods</code></td></tr>
           <tr><td>Non riesco a connettermi</td><td>Controlla che l'<a href="https://aria-mc-server-972697371927.europe-west8.run.app/">AriA Panel</a> mostri l'IP</td></tr>
@@ -248,6 +264,20 @@
 
       <div class="step">
         <div class="step-header"><span class="step-num">02</span><h2>Install the Mods</h2></div>
+        <p class="note"><strong>Shortcut:</strong> open PowerShell (search "PowerShell" in the Start menu), paste the script below and press Enter. It sets up the correct <code>mods</code> folder and opens both it and Google Drive, so all you have to do is download the zip and drag it in.</p>
+        <div class="script-box">
+          <button class="script-copy-btn" onclick="copyScript(this, 'ps-en-win')">Copy</button>
+          <pre id="ps-en-win">Write-Host "Which AriA world? [1] Classic  [2] Cobblemon  [3] Latest"
+$choice = Read-Host "Enter 1, 2 or 3"
+$world = switch ($choice) { "1" {"classic"} "2" {"cobblemon"} "3" {"latest"} default {"classic"} }
+$gd = "$env:APPDATA\.minecraft-aria-$world"
+Remove-Item "$gd\mods" -Recurse -Force -ErrorAction SilentlyContinue
+New-Item -ItemType Directory -Path "$gd\mods" -Force | Out-Null
+Start-Process "https://drive.google.com/drive/folders/1PGz6Pj-zHA_SCj3PurE3ThTkz9V7AP9N?usp=sharing"
+Start-Process explorer.exe $gd
+Write-Host "Done! Download this world's zip from the Drive tab, open it, select all and drag it into the mods folder that just opened."</pre>
+        </div>
+        <p class="note">Prefer doing it by hand? Follow these steps:</p>
         <ol>
           <li>In SKLauncher, right-click your Fabric instance and select <strong>Open Folder</strong></li>
           <li>If a <code>mods</code> folder exists, <strong>delete it entirely</strong> (right-click → Delete)</li>
@@ -282,6 +312,7 @@
         <thead><tr><th>Problem</th><th>Solution</th></tr></thead>
         <tbody>
           <tr><td>Game crashes on launch</td><td>Delete <code>mods</code> and re-extract from scratch</td></tr>
+          <tr><td>"Connection Lost" with "unknown registry entries" when connecting</td><td>Your installed mods no longer match the server's (a mod was recently added or removed). Delete the <code>mods</code> folder, download the latest zip from the <a href="https://drive.google.com/drive/folders/1PGz6Pj-zHA_SCj3PurE3ThTkz9V7AP9N?usp=sharing" target="_blank" rel="noopener">shared folder</a> and extract everything again — just adding the new mod isn't enough</td></tr>
           <tr><td>Fabric instance missing</td><td>Redo step 1 and make sure you selected Fabric and your world's version (1.20.1, 1.21.1 or 26.2)</td></tr>
           <tr><td>Seeing mods from another world, or ones I didn't install</td><td>You didn't set a separate Game Directory for this instance (see step 1) — your installations are sharing the same <code>mods</code> folder</td></tr>
           <tr><td>Can't connect</td><td>Check the <a href="https://aria-mc-server-972697371927.europe-west8.run.app/">AriA Panel</a> shows an IP</td></tr>
@@ -352,6 +383,7 @@
         <thead><tr><th>Problem</th><th>Solution</th></tr></thead>
         <tbody>
           <tr><td>Game crashes on launch</td><td>Delete <code>mods</code> and re-extract from scratch</td></tr>
+          <tr><td>"Connection Lost" with "unknown registry entries" when connecting</td><td>Your installed mods no longer match the server's (a mod was recently added or removed). Delete the <code>mods</code> folder, download the latest zip from the <a href="https://drive.google.com/drive/folders/1PGz6Pj-zHA_SCj3PurE3ThTkz9V7AP9N?usp=sharing" target="_blank" rel="noopener">shared folder</a> and extract everything again — just adding the new mod isn't enough</td></tr>
           <tr><td>Fabric instance missing</td><td>Redo step 1 and make sure you selected Fabric and your world's version (1.20.1, 1.21.1 or 26.2)</td></tr>
           <tr><td>Seeing mods from another world, or ones I didn't install</td><td>You didn't set a separate Game Directory for this instance (see step 1) — your installations are sharing the same <code>mods</code> folder</td></tr>
           <tr><td>Can't connect</td><td>Check the <a href="https://aria-mc-server-972697371927.europe-west8.run.app/">AriA Panel</a> shows an IP</td></tr>
@@ -383,6 +415,16 @@
       btn.closest('.toggle-group').querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       show();
+    }
+
+    function copyScript(btn, preId) {
+      const text = document.getElementById(preId).textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        const original = btn.textContent;
+        btn.textContent = '✓';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = original; btn.classList.remove('copied'); }, 1800);
+      });
     }
   </script>
 </body>
