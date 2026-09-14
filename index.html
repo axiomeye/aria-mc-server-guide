@@ -100,7 +100,11 @@
           <li>Clicca <strong>Save</strong>, selezionala nella home e avviala una volta per scaricare i file. Chiudila subito appena compare il menu principale</li>
         </ol>
         <p class="note"><strong>Importante:</strong> senza una Game Directory dedicata, tutte le tue istanze Fabric condividono le stesse mod, mondi e opzioni. Se hai già altre installazioni modate, il passo successivo (che elimina la cartella <code>mods</code>) cancellerebbe anche quelle. Se vuoi giocare a più di uno dei tre mondi AriA, ogni mondo ha bisogno della propria Game Directory.</p>
-        <p class="note">Per chi vuole spingersi oltre lo slider Memory: incolla questo negli <strong>JVM Arguments</strong> (imposta anche <strong>Memory</strong> a 6 GB) per una gestione della memoria più fluida, utile soprattutto su Cobblemon:<br><code style="font-size:.75rem; word-break:break-all;">-XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1</code></p>
+        <p class="note">Per chi vuole spingersi oltre lo slider Memory: incolla questo negli <strong>JVM Arguments</strong> (imposta anche <strong>Memory</strong> a 6 GB) per una gestione della memoria più fluida, utile soprattutto su Cobblemon:</p>
+        <div class="script-box">
+          <button class="script-copy-btn" onclick="copyScript(this)">Copia</button>
+          <pre class="wrap">-XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1</pre>
+        </div>
         <p class="note">Se hai già acquistato Minecraft e preferisci il <a href="https://www.minecraft.net/it-it/download" target="_blank" rel="noopener">Launcher Ufficiale</a>, dovrai installare Java da <a href="https://adoptium.net/" target="_blank" rel="noopener">adoptium.net</a> e Fabric manualmente tramite il <a href="https://maven.fabricmc.net/net/fabricmc/fabric-installer/1.0.3/fabric-installer-1.0.3.jar">Fabric Installer</a> (versione 1.20.1).</p>
       </div><hr class="divider">
 
@@ -186,7 +190,11 @@ Write-Host "Fatto! Scarica lo zip del tuo mondo dalla scheda Drive, aprilo, sele
           <li>Clicca <strong>Save</strong>, selezionala nella home e avviala una volta per scaricare i file. Chiudila subito appena compare il menu principale</li>
         </ol>
         <p class="note"><strong>Importante:</strong> senza una Game Directory dedicata, tutte le tue istanze Fabric condividono le stesse mod, mondi e opzioni. Se hai già altre installazioni modate, il passo successivo (che elimina la cartella <code>mods</code>) cancellerebbe anche quelle. Se vuoi giocare a più di uno dei tre mondi AriA, ogni mondo ha bisogno della propria Game Directory.</p>
-        <p class="note">Per chi vuole spingersi oltre lo slider Memory: incolla questo negli <strong>JVM Arguments</strong> (imposta anche <strong>Memory</strong> a 6 GB) per una gestione della memoria più fluida, utile soprattutto su Cobblemon:<br><code style="font-size:.75rem; word-break:break-all;">-XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1</code></p>
+        <p class="note">Per chi vuole spingersi oltre lo slider Memory: incolla questo negli <strong>JVM Arguments</strong> (imposta anche <strong>Memory</strong> a 6 GB) per una gestione della memoria più fluida, utile soprattutto su Cobblemon:</p>
+        <div class="script-box">
+          <button class="script-copy-btn" onclick="copyScript(this)">Copia</button>
+          <pre class="wrap">-XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1</pre>
+        </div>
         <p class="note">Se hai già acquistato Minecraft e preferisci il <a href="https://www.minecraft.net/it-it/download" target="_blank" rel="noopener">Launcher Ufficiale</a>, dovrai installare Java da <a href="https://adoptium.net/" target="_blank" rel="noopener">adoptium.net</a> e Fabric manualmente tramite il <a href="https://maven.fabricmc.net/net/fabricmc/fabric-installer/1.0.3/fabric-installer-1.0.3.jar">Fabric Installer</a> (versione 1.20.1).</p>
       </div><hr class="divider">
 
@@ -258,7 +266,11 @@ Write-Host "Fatto! Scarica lo zip del tuo mondo dalla scheda Drive, aprilo, sele
           <li>Click <strong>Save</strong>, select it on the home screen and launch it once to download the files. Close it as soon as the main menu appears</li>
         </ol>
         <p class="note"><strong>Important:</strong> without a dedicated Game Directory, every Fabric installation you have shares the same mods, worlds and options. If you already have other modded installs, the next step (which deletes the <code>mods</code> folder) would wipe those out too. If you want to play more than one of the three AriA worlds, each one needs its own Game Directory.</p>
-        <p class="note">If you want to go beyond the Memory slider: paste this into <strong>JVM Arguments</strong> (and set <strong>Memory</strong> to 6 GB too) for smoother memory management, most useful on Cobblemon:<br><code style="font-size:.75rem; word-break:break-all;">-XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1</code></p>
+        <p class="note">If you want to go beyond the Memory slider: paste this into <strong>JVM Arguments</strong> (and set <strong>Memory</strong> to 6 GB too) for smoother memory management, most useful on Cobblemon:</p>
+        <div class="script-box">
+          <button class="script-copy-btn" onclick="copyScript(this)">Copy</button>
+          <pre class="wrap">-XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1</pre>
+        </div>
         <p class="note">If you own Minecraft and prefer the <a href="https://www.minecraft.net/en-us/download" target="_blank" rel="noopener">Official Launcher</a>, you'll need to install Java from <a href="https://adoptium.net/" target="_blank" rel="noopener">adoptium.net</a> and Fabric separately using the <a href="https://maven.fabricmc.net/net/fabricmc/fabric-installer/1.0.3/fabric-installer-1.0.3.jar">Fabric Installer</a> (version 1.20.1).</p>
       </div><hr class="divider">
 
@@ -343,7 +355,11 @@ Write-Host "Done! Download this world's zip from the Drive tab, open it, select 
           <li>Click <strong>Save</strong>, select it on the home screen and launch it once to download the files. Close it as soon as the main menu appears</li>
         </ol>
         <p class="note"><strong>Important:</strong> without a dedicated Game Directory, every Fabric installation you have shares the same mods, worlds and options. If you already have other modded installs, the next step (which deletes the <code>mods</code> folder) would wipe those out too. If you want to play more than one of the three AriA worlds, each one needs its own Game Directory.</p>
-        <p class="note">If you want to go beyond the Memory slider: paste this into <strong>JVM Arguments</strong> (and set <strong>Memory</strong> to 6 GB too) for smoother memory management, most useful on Cobblemon:<br><code style="font-size:.75rem; word-break:break-all;">-XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1</code></p>
+        <p class="note">If you want to go beyond the Memory slider: paste this into <strong>JVM Arguments</strong> (and set <strong>Memory</strong> to 6 GB too) for smoother memory management, most useful on Cobblemon:</p>
+        <div class="script-box">
+          <button class="script-copy-btn" onclick="copyScript(this)">Copy</button>
+          <pre class="wrap">-XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1</pre>
+        </div>
         <p class="note">If you own Minecraft and prefer the <a href="https://www.minecraft.net/en-us/download" target="_blank" rel="noopener">Official Launcher</a>, you'll need to install Java from <a href="https://adoptium.net/" target="_blank" rel="noopener">adoptium.net</a> and Fabric separately using the <a href="https://maven.fabricmc.net/net/fabricmc/fabric-installer/1.0.3/fabric-installer-1.0.3.jar">Fabric Installer</a> (version 1.20.1).</p>
       </div><hr class="divider">
 
@@ -418,7 +434,8 @@ Write-Host "Done! Download this world's zip from the Drive tab, open it, select 
     }
 
     function copyScript(btn, preId) {
-      const text = document.getElementById(preId).textContent;
+      const el = preId ? document.getElementById(preId) : btn.parentElement.querySelector('pre');
+      const text = el.textContent;
       navigator.clipboard.writeText(text).then(() => {
         const original = btn.textContent;
         btn.textContent = '✓';
